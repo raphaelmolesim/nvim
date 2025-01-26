@@ -60,6 +60,16 @@ require('packer').startup(function(use)
   -- Theme
   use { "catppuccin/nvim", as = "catppuccin-mocha" }
 
+
+  -- LazyGit
+  use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+  })
+
   -- GitHub Copilot
   use {
   "github/copilot.vim",
