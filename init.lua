@@ -1,4 +1,3 @@
-
 require('packer').startup(function(use)
   
   -- Package Manager
@@ -94,3 +93,6 @@ require('config.keymaps')
 require('config.cmp')
 
 require('config.lualine')
+
+require('config.clipboard')
+
