@@ -80,9 +80,9 @@ _G.packer_plugins = {
     path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/blame.nvim",
     url = "https://github.com/FabijanZulj/blame.nvim"
   },
-  catppuccin = {
+  ["catppuccin-mocha"] = {
     loaded = true,
-    path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/catppuccin",
+    path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/catppuccin-mocha",
     url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
@@ -105,6 +105,12 @@ _G.packer_plugins = {
     path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["copilot.vim"] = {
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    loaded = true,
+    path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -126,7 +132,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    config = { "\27LJ\2\n¤\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\3\vindent\0\17auto_install\2\14highlight\0\nsetup\28nvim-treesitter.configs\frequire\0" },
+    config = { "\27LJ\2\n¤\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\3\14highlight\0\17auto_install\2\vindent\0\nsetup\28nvim-treesitter.configs\frequire\0" },
     loaded = true,
     path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -170,14 +176,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\n¤\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\3\14highlight\0\17auto_install\2\vindent\0\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: copilot.vim
+time([[Config for copilot.vim]], true)
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "copilot.vim")
+time([[Config for copilot.vim]], false)
 -- Config for: blame.nvim
 time([[Config for blame.nvim]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\nblame\frequire\0", "config", "blame.nvim")
 time([[Config for blame.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\n¤\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\3\vindent\0\17auto_install\2\14highlight\0\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

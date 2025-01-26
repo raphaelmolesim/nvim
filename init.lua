@@ -60,7 +60,17 @@ require('packer').startup(function(use)
   -- Theme
   use { "catppuccin/nvim", as = "catppuccin-mocha" }
 
+  -- GitHub Copilot
+  use {
+  "github/copilot.vim",
+  config = function()
+    -- Optional: Add any configuration or key mappings here
+  end
+}
+
 end)
+
+vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
 
 require('config.general')
 
