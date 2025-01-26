@@ -1,5 +1,5 @@
 -- Allow copy and paste to system clipboard
-:vim.g.clipboard = {
+vim.g.clipboard = {
   name = "win32yank",
   copy = {
      ["+"] = "clip.exe",
