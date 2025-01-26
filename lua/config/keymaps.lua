@@ -1,14 +1,14 @@
 -- Custom shortcuts
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
-  '<C-p>', -- Keybinding
+  '<C-f>', -- Keybinding
   "<cmd>lua require('telescope.builtin').live_grep()<CR>", -- Command
   { noremap = true, silent = true } -- Options
 )
 
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
-  '<C-f>', -- Keybinding
+  '<C-p>', -- Keybinding
   "<cmd>lua require('telescope.builtin').find_files()<CR>", -- Command
   { noremap = true, silent = true } -- Options
 )
@@ -21,10 +21,19 @@ vim.api.nvim_set_keymap('n', '<C-w>3', ':vertical resize 30<CR>', { noremap = tr
 -- Quit
 vim.api.nvim_set_keymap('n', '<C-c>', ':qall<CR>', { noremap = true, silent = true })
 
--- 
+-- List buffers
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
   '<S-Tab>', -- Keybinding
   "<cmd>lua require('telescope.builtin').buffers()<CR>", -- Command
   { noremap = true, silent = true } -- Options
 )
+
+-- Toggle Sidebar Menu
+vim.api.nvim_set_keymap(
+  'n', -- Normal mode
+  '<C-b>', -- Keybinding
+  ":NvimTreeToggle<CR>", -- Command
+  { noremap = true, silent = true } -- Options
+)
+
