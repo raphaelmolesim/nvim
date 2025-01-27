@@ -43,3 +43,6 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true } -- Options
 )
 
+-- Move line in the Insert mode
+vim.api.nvim_set_keymap('i', '<M-Up>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<M-Down>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
