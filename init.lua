@@ -121,8 +121,7 @@ vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
 
 require('config.general')
 
--- Set up Telescope With FZF
-require('telescope').load_extension('fzf')
+require('config.telescope')
 
 require('config.ntree')
 
