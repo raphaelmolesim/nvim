@@ -39,7 +39,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
   '<C-b>', -- Keybinding
-  ":NvimTreeToggle<CR>", -- Command
+  ":NvimTreeFindFileToggle<CR>", -- Command
   { noremap = true, silent = true } -- Options
 )
 
