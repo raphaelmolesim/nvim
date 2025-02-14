@@ -27,6 +27,15 @@ vim.api.nvim_set_keymap('n', 'rp', ':let @" = expand("%")<CR>', { noremap = true
 -- Quit
 vim.api.nvim_set_keymap('n', '<C-c>', ':qall<CR>', { noremap = true, silent = true })
 
+-- New file
+vim.api.nvim_set_keymap('n', 'nf', ':enew<CR>', { noremap = true, silent = true })
+
+-- Resize window
+vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
+vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
+vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+
 -- List buffers
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
