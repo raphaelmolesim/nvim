@@ -26,6 +26,8 @@ vim.api.nvim_set_keymap('n', 'rp', ':let @" = expand("%")<CR>', { noremap = true
 -- Copy relative path to clipboard
 vim.api.nvim_set_keymap('n', 'rc', ':let @+ = expand("%")<CR>', { noremap = true, silent = true })
 
+-- Set files no not open collapsed
+vim.opt.foldenable = false
 
 -- Quit
 vim.api.nvim_set_keymap('n', '<C-c>', ':qall<CR>', { noremap = true, silent = true })
