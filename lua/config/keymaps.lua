@@ -23,6 +23,9 @@ vim.api.nvim_set_keymap('n', 'gg', ':LazyGit<CR>', { noremap = true, silent = tr
 
 -- Copy relative path
 vim.api.nvim_set_keymap('n', 'rp', ':let @" = expand("%")<CR>', { noremap = true, silent = true })
+-- Copy relative path to clipboard
+vim.api.nvim_set_keymap('n', 'rc', ':let @+ = expand("%")<CR>', { noremap = true, silent = true })
+
 
 -- Quit
 vim.api.nvim_set_keymap('n', '<C-c>', ':qall<CR>', { noremap = true, silent = true })
@@ -35,6 +38,29 @@ vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]]) -- make the window big
 vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
 vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
 vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+
+-- Copy to clipboard
+vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
+
+-- Paste from clipboard
+vim.api.nvim_set_keymap('n', '<C-v>', '"+p', { noremap = true, silent = true })
+
+-- Select a lines with Shit + Arrow from insert mode
+vim.api.nvim_set_keymap('i', '<S-Down>', '<Esc>lvj', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<S-Up>', '<Esc>lvk', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<S-Right>', '<Esc>lvl', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<S-Left>', '<Esc>lvh', { noremap = true, silent = true })
+
+-- Continually move cursor in the beginning of line
+vim.api.nvim_set_keymap('n', '<Left>', 'col(".") == 1 ? "<Up>$" : "<Left>"', { noremap = true, expr = true, silent = true })
+-- Continually move cursor in the beginning of line
+vim.api.nvim_set_keymap('n', '<Right>', 'col(".") == col("$") - 1 ? "<Down>0" : "<Right>"', { noremap = true, expr = true, silent = true })
+
+vim.api.nvim_set_keymap('i', '<Left>', 'col(".") == 1 ? "<Esc><Up>A" : "<Left>"', { noremap = true, expr = true, silent = true })
+vim.api.nvim_set_keymap('i', '<Right>', 'col(".") == col("$") ? "<Esc><Down>0i" : "<Right>"', { noremap = true, expr = true, silent = true })
+
+-- Select the full line from insert mode
+vim.api.nvim_set_keymap('i', '<S-V>', '<Esc>V', { noremap = true, silent = true })
 
 -- List buffers
 vim.api.nvim_set_keymap(
