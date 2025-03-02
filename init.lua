@@ -115,15 +115,6 @@ require('packer').startup(function(use)
 	  end
   })
 
-	use {
-    'rmagatti/auto-session',
-    config = function()
-      require("auto-session").setup {
-        suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
-      }
-    end
-  }
-
 end)
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
@@ -142,7 +133,7 @@ require('config.lualine')
 
 require('config.clipboard')
 
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+require('config.session_save')
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

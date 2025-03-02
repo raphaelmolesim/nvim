@@ -19,7 +19,7 @@ vim.api.nvim_set_keymap('n', '<C-w>2', ':vertical resize 100<CR>', { noremap = t
 vim.api.nvim_set_keymap('n', '<C-w>3', ':vertical resize 30<CR>', { noremap = true, silent = true })
 
 -- LazyGit
-vim.api.nvim_set_keymap('n', 'gg', ':LazyGit<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'lg', ':LazyGit<CR>', { noremap = true, silent = true })
 
 -- Copy relative path
 vim.api.nvim_set_keymap('n', 'rp', ':let @" = expand("%")<CR>', { noremap = true, silent = true })

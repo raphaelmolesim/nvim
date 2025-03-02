@@ -15,6 +15,12 @@ require("telescope").setup({
       height = 0.5,
     },
   }),
+  pickers = {
+    buffers = {
+      sort_mru = true,  -- Sort buffers by most recently used
+      ignore_current_buffer = true, -- (optional) Don't show the current buffer first
+    },
+  },
 })
 
 
