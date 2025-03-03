@@ -115,6 +115,9 @@ require('packer').startup(function(use)
 	  end
   })
 
+  use "nvim-lua/plenary.nvim"
+  use "ThePrimeagen/harpoon"
+
 end)
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
@@ -134,6 +137,8 @@ require('config.lualine')
 require('config.clipboard')
 
 require('config.session_save')
+
+require('config.harpoon')
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
