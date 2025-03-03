@@ -119,6 +119,8 @@ require('packer').startup(function(use)
   use "ThePrimeagen/harpoon"
 
   use 'rcarriga/nvim-notify'
+
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
@@ -144,3 +146,4 @@ require('config.harpoon')
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
+require('config.bufferline')
