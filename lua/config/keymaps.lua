@@ -1,3 +1,5 @@
+vim.notify = require("notify")
+
 -- Custom shortcuts
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
@@ -25,6 +27,11 @@ vim.api.nvim_set_keymap('n', 'lg', ':LazyGit<CR>', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', 'rp', ':let @" = expand("%")<CR>', { noremap = true, silent = true })
 -- Copy relative path to clipboard
 vim.api.nvim_set_keymap('n', 'rc', ':let @+ = expand("%")<CR>', { noremap = true, silent = true })
+-- Show relative path
+vim.keymap.set("n", "<leader>f", function()
+    vim.notify(vim.fn.expand("%:p:."), vim.log.levels.INFO, { title = "File Path" })
+end)
+
 
 -- Select all
 vim.api.nvim_set_keymap('n', 'sa', 'ggVG', { noremap = true, silent = true })

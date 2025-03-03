@@ -118,6 +118,7 @@ require('packer').startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "ThePrimeagen/harpoon"
 
+  use 'rcarriga/nvim-notify'
 end)
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
