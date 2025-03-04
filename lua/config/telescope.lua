@@ -1,9 +1,11 @@
+local telescope = require("telescope")
+
 -- Set up Telescope With FZF
-require('telescope').load_extension('fzf')
+telescope.load_extension('fzf')
 
 local actions = require("telescope.actions")
 
-require("telescope").setup({
+telescope.setup({
   defaults = require("telescope.themes").get_dropdown({ 
     mappings = {
       n = {
@@ -23,7 +25,7 @@ require("telescope").setup({
   },
 })
 
-
+telescope.load_extension("live_grep_args")
 
 
 

@@ -20,7 +20,10 @@ require('packer').startup(function(use)
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { 
+      { 'nvim-lua/plenary.nvim' },
+      { "nvim-telescope/telescope-live-grep-args.nvim" }
+    }
   }
 
   -- FZF
@@ -121,6 +124,20 @@ require('packer').startup(function(use)
   use 'rcarriga/nvim-notify'
 
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+  use { "anuvyklack/windows.nvim",
+    requires = {
+      "anuvyklack/middleclass",
+      "anuvyklack/animation.nvim"
+    },
+    config = function()
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
+      vim.o.equalalways = false
+      require('windows').setup()
+    end
+  }
+
 end)
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
@@ -147,3 +164,5 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 require('config.bufferline')
+
+

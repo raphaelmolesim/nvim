@@ -4,7 +4,7 @@ vim.notify = require("notify")
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
   '<C-f>', -- Keybinding
-  "<cmd>lua require('telescope.builtin').live_grep()<CR>", -- Command
+  ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", -- Command
   { noremap = true, silent = true } -- Options
 )
 
@@ -70,9 +70,6 @@ vim.api.nvim_set_keymap('n', '<Right>', 'col(".") == col("$") - 1 ? "<Down>0" : 
 
 vim.api.nvim_set_keymap('i', '<Left>', 'col(".") == 1 ? "<Esc><Up>A" : "<Left>"', { noremap = true, expr = true, silent = true })
 vim.api.nvim_set_keymap('i', '<Right>', 'col(".") == col("$") ? "<Esc><Down>0i" : "<Right>"', { noremap = true, expr = true, silent = true })
-
--- Select the full line from insert mode
-vim.api.nvim_set_keymap('i', '<S-V>', '<Esc>V', { noremap = true, silent = true })
 
 -- List buffers
 vim.api.nvim_set_keymap(
