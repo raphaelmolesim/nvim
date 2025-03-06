@@ -138,6 +138,8 @@ require('packer').startup(function(use)
     end
   }
 
+ use "nvim-pack/nvim-spectre"
+
 end)
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
