@@ -22,6 +22,13 @@ telescope.setup({
       sort_mru = true,  -- Sort buffers by most recently used
       ignore_current_buffer = true, -- (optional) Don't show the current buffer first
     },
+    find_files = {
+      find_command = {'rg', '--files', '--hidden' }, -- Use rg to find files, including hidden files
+      -- Configure case insensitivity only for find_files
+      sorter = require('telescope.sorters').get_fzy_sorter({
+        case_sensitive = false,  -- Make find_files case insensitive        
+      }),
+    },
   },
 })
 
