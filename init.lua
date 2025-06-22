@@ -50,11 +50,25 @@ require('packer').startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
+		requires = {
+      { "nvim-treesitter/nvim-treesitter-textobjects" },
+			{ "nvim-treesitter/nvim-treesitter-context" }, 
+    },
     config = function()
       require("nvim-treesitter.configs").setup({
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = false },
+				ensure_installed = {
+				  "go", "gomod", "gosum", "gowork", "proto", "json", "ruby", "sql", "yaml", "csv"
+	      },
+				textobjects = { select = { enable = true, lookaround = true } }
+      })
+
+			require("treesitter-context").setup({
+        enable = true,
+        mode = 'topline',
+        line_numbers = true
       })
     end
   }
@@ -74,11 +88,11 @@ require('packer').startup(function(use)
 
   -- GitHub Copilot
   use({
-		"github/copilot.vim",
-		config = function()
-			-- Optional: Add any configuration or key mappings here
-		end
-	})
+    "github/copilot.vim",
+      config = function()
+        -- Optional: Add any configuration or key mappings here
+      end
+  })
 
   -- AutoSave
   use({
@@ -140,6 +154,15 @@ require('packer').startup(function(use)
 
  use "nvim-pack/nvim-spectre"
 
+ use({
+    'ray-x/navigator.lua',
+    requires = {
+        { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+        { 'neovim/nvim-lspconfig' },
+	      { 'ray-x/lsp_signature.nvim' },
+    },
+  })
+
 end)
 
 vim.g.copilot_node_command = "~/.asdf/installs/nodejs/20.5.0/bin/node"
@@ -167,4 +190,15 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 require('config.bufferline')
 
+require('navigator').setup({
+  lsp = {
+    enabled = true,
+    servers = {
+      "gopls",
+    },
+    windows = {
+      border = "rounded"
+    },
+  }
+})
 
