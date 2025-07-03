@@ -80,7 +80,7 @@ vim.api.nvim_set_keymap(
 )
 
 -- Close all buffers
-vim.keymap.set('n', 'ccc', ':%bdelete<CR>:Alpha<CR>', { desc = 'Delete all buffers and create new empty buffer' })
+vim.keymap.set('n', 'ccc', ':%bdelete<CR>:Alpha<CR>:NvimTreeFindFileToggle<CR>', { desc = 'Delete all buffers and create new empty buffer' })
 
 -- Toggle Sidebar Menu
 vim.api.nvim_set_keymap(
