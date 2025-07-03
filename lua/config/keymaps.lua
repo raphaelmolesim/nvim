@@ -79,6 +79,9 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true } -- Options
 )
 
+-- Close all buffers
+vim.keymap.set('n', 'ccc', ':%bdelete<CR>:Alpha<CR>', { desc = 'Delete all buffers and create new empty buffer' })
+
 -- Toggle Sidebar Menu
 vim.api.nvim_set_keymap(
   'n', -- Normal mode
@@ -90,3 +93,9 @@ vim.api.nvim_set_keymap(
 -- Move line in the Insert mode
 vim.api.nvim_set_keymap('i', '<M-Up>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<M-Down>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
+
+-- Navigator keymaps
+-- Find all implementations
+vim.api.nvim_set_keymap('n', 'gi', '<cmd>lua require("navigator.implementation").implementation()<CR>', { noremap = true, silent = true })
+-- Show hover documentation
+vim.api.nvim_set_keymap('n', 'K', '<cmd>lua require("navigator.hover").hover()<CR>', { noremap = true, silent = true })

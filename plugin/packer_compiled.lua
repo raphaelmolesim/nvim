@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17config.alpha\frequire\0" },
+    loaded = true,
+    path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["animation.nvim"] = {
     loaded = true,
     path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/animation.nvim",
@@ -188,7 +194,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    config = { "\27LJ\2\n©\3\0\0\5\0\16\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\0016\0\0\0'\2\14\0B\0\2\0029\0\2\0005\2\15\0B\0\2\1K\0\1\0\1\0\3\tmode\ftopline\venable\2\17line_numbers\2\23treesitter-context\16textobjects\vselect\1\0\1\vselect\0\1\0\2\venable\2\15lookaround\2\21ensure_installed\1\v\0\0\ago\ngomod\ngosum\vgowork\nproto\tjson\truby\bsql\tyaml\bcsv\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\5\16textobjects\0\vindent\0\21ensure_installed\0\17auto_install\2\14highlight\0\nsetup\28nvim-treesitter.configs\frequire\0" },
+    config = { "\27LJ\2\n—\3\0\0\5\0\16\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\0016\0\0\0'\2\14\0B\0\2\0029\0\2\0005\2\15\0B\0\2\1K\0\1\0\1\0\3\17line_numbers\2\venable\2\tmode\ftopline\23treesitter-context\16textobjects\vselect\1\0\1\vselect\0\1\0\2\15lookaround\2\venable\2\21ensure_installed\1\17\0\0\ago\ngomod\ngosum\vgowork\nproto\tjson\truby\bsql\tyaml\bcsv\15javascript\15typescript\thtml\bcss\tbash\blua\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\5\21ensure_installed\0\16textobjects\0\17auto_install\2\14highlight\0\vindent\0\nsetup\28nvim-treesitter.configs\frequire\0" },
     loaded = true,
     path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -204,9 +210,8 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/home/raphaelmolesim/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -253,14 +258,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: windows.nvim
-time([[Config for windows.nvim]], true)
-try_loadstring("\27LJ\2\nå\1\0\0\3\0\b\0\0186\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\n\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\16equalalways\16winminwidth\rwinwidth\6o\bvim\0", "config", "windows.nvim")
-time([[Config for windows.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\n©\3\0\0\5\0\16\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\0016\0\0\0'\2\14\0B\0\2\0029\0\2\0005\2\15\0B\0\2\1K\0\1\0\1\0\3\tmode\ftopline\venable\2\17line_numbers\2\23treesitter-context\16textobjects\vselect\1\0\1\vselect\0\1\0\2\venable\2\15lookaround\2\21ensure_installed\1\v\0\0\ago\ngomod\ngosum\vgowork\nproto\tjson\truby\bsql\tyaml\bcsv\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\5\16textobjects\0\vindent\0\21ensure_installed\0\17auto_install\2\14highlight\0\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
+-- Config for: blame.nvim
+time([[Config for blame.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\nblame\frequire\0", "config", "blame.nvim")
+time([[Config for blame.nvim]], false)
 -- Config for: copilot.vim
 time([[Config for copilot.vim]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "copilot.vim")
@@ -269,10 +270,18 @@ time([[Config for copilot.vim]], false)
 time([[Config for auto-save.nvim]], true)
 try_loadstring("\27LJ\2\nT\0\0\4\0\5\0\b'\0\0\0006\1\1\0009\1\2\0019\1\3\1'\3\4\0B\1\2\2&\0\1\0L\0\2\0\r%H:%M:%S\rstrftime\afn\bvim\24AutoSave: saved at ≥\1\0\1\t\0\b\1\0246\1\0\0009\1\1\0016\2\2\0'\4\3\0B\2\2\0029\3\4\1\18\5\0\0'\6\5\0B\3\3\2\t\3\0\0X\3\vÄ9\3\6\0029\5\4\1\18\a\0\0'\b\a\0B\5\3\0024\6\0\0B\3\3\2\15\0\3\0X\4\2Ä+\3\2\0L\3\2\0+\3\1\0L\3\2\0\14&filetype\vnot_in\16&modifiable\14getbufvar\25auto-save.utils.data\frequire\afn\bvim\2§\3\1\0\5\0\14\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0003\4\4\0=\4\6\3=\3\a\0025\3\b\0=\3\t\0023\3\n\0=\3\v\0025\3\f\0=\3\r\2B\0\2\1K\0\1\0\14callbacks\1\0\5\26before_asserting_save\0\14disabling\0\renabling\0\17after_saving\0\18before_saving\0\14condition\0\19trigger_events\1\3\0\0\16InsertLeave\16TextChanged\22execution_message\fmessage\1\0\3\22cleaning_interval\3‚\t\fmessage\0\bdim\4äÆèÖ\aΩîú˛\3\0\1\0\a\19trigger_events\0\19debounce_delay\3á\1\14callbacks\0\14condition\0\22write_all_buffers\1\22execution_message\0\fenabled\2\nsetup\14auto-save\frequire\0", "config", "auto-save.nvim")
 time([[Config for auto-save.nvim]], false)
--- Config for: blame.nvim
-time([[Config for blame.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\nblame\frequire\0", "config", "blame.nvim")
-time([[Config for blame.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17config.alpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
+-- Config for: windows.nvim
+time([[Config for windows.nvim]], true)
+try_loadstring("\27LJ\2\nå\1\0\0\3\0\b\0\0186\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\n\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\16equalalways\16winminwidth\rwinwidth\6o\bvim\0", "config", "windows.nvim")
+time([[Config for windows.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\n—\3\0\0\5\0\16\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\v\0005\4\n\0=\4\f\3=\3\r\2B\0\2\0016\0\0\0'\2\14\0B\0\2\0029\0\2\0005\2\15\0B\0\2\1K\0\1\0\1\0\3\17line_numbers\2\venable\2\tmode\ftopline\23treesitter-context\16textobjects\vselect\1\0\1\vselect\0\1\0\2\15lookaround\2\venable\2\21ensure_installed\1\17\0\0\ago\ngomod\ngosum\vgowork\nproto\tjson\truby\bsql\tyaml\bcsv\15javascript\15typescript\thtml\bcss\tbash\blua\vindent\1\0\1\venable\1\14highlight\1\0\1\venable\2\1\0\5\21ensure_installed\0\16textobjects\0\17auto_install\2\14highlight\0\vindent\0\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

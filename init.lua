@@ -60,7 +60,7 @@ require('packer').startup(function(use)
         highlight = { enable = true },
         indent = { enable = false },
 				ensure_installed = {
-				  "go", "gomod", "gosum", "gowork", "proto", "json", "ruby", "sql", "yaml", "csv"
+				  "go", "gomod", "gosum", "gowork", "proto", "json", "ruby", "sql", "yaml", "csv", "javascript", "typescript", "html", "css", "bash", "lua",
 	      },
 				textobjects = { select = { enable = true, lookaround = true } }
       })
@@ -162,6 +162,17 @@ require('packer').startup(function(use)
 	      { 'ray-x/lsp_signature.nvim' },
     },
   })
+
+  use 'nvim-tree/nvim-web-devicons'  -- Add this line separately
+
+  -- Alpha Dashboard
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('config.alpha')
+    end
+  }
 
 end)
 
